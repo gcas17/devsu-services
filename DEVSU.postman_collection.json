@@ -1,0 +1,2235 @@
+{
+	"info": {
+		"_postman_id": "d6c1c9de-30be-4085-a529-171f02e646a0",
+		"name": "DEVSU",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16971251"
+	},
+	"item": [
+		{
+			"name": "BUSINESS-CLIENT-MANAGEMENT-SERVICE",
+			"item": [
+				{
+					"name": "LISTAR CLIENTES",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clientes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "LISTAR CLIENTES",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/clientes",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"clientes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Jun 2024 16:50:07 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"George Castillo\",\n        \"address\": \"Av. Javier Prado 777\",\n        \"phone\": \"941131257\",\n        \"password\": \"123456\",\n        \"status\": true\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Maria Fernanda Aranda Castro\",\n        \"address\": \"Av. Javier Prado 778\",\n        \"phone\": \"925219345\",\n        \"password\": \"654321\",\n        \"status\": true\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "OBTENER CLIENTE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clientes/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OBTENER CLIENTE",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/clientes/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"clientes",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "120"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Jun 2024 16:49:57 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"George Castillo\",\n    \"address\": \"Av. Javier Prado 777\",\n    \"phone\": \"941131257\",\n    \"password\": \"123456\",\n    \"status\": true\n}"
+						},
+						{
+							"name": "OBTENER CLIENTE",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/clientes/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"clientes",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "133"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Jun 2024 16:49:48 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"name\": \"Maria Fernanda Aranda Castro\",\n    \"address\": \"Av. Javier Prado 778\",\n    \"phone\": \"925219345\",\n    \"password\": \"654321\",\n    \"status\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "CREAR CLIENTE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"George Castillo\",\r\n  \"gender\": \"M\",\r\n  \"age\": 30,\r\n  \"identification\": \"70291259\",\r\n  \"address\": \"Av. Javier Prado 777\",\r\n  \"phone\": \"941131257\",\r\n  \"password\": \"123456\",\r\n  \"status\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/clientes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CREAR CLIENTE",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"George Castillo\",\r\n  \"gender\": \"M\",\r\n  \"age\": 1,\r\n  \"identification\": \"70291259\",\r\n  \"address\": \"Av. Javier Prado 777\",\r\n  \"phone\": \"941131257\",\r\n  \"password\": \"123456\",\r\n  \"status\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/clientes",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"clientes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "120"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Jun 2024 16:44:34 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"George Castillo\",\n    \"address\": \"Av. Javier Prado 777\",\n    \"phone\": \"941131257\",\n    \"password\": \"123456\",\n    \"status\": true\n}"
+						},
+						{
+							"name": "CREAR CLIENTE",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Maria Fernanda Aranda Castro\",\r\n  \"gender\": \"F\",\r\n  \"age\": 20,\r\n  \"identification\": \"19251983\",\r\n  \"address\": \"Av. Javier Prado 778\",\r\n  \"phone\": \"925219345\",\r\n  \"password\": \"654321\",\r\n  \"status\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/clientes",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"clientes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "133"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Jun 2024 16:45:55 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"name\": \"Maria Fernanda Aranda Castro\",\n    \"address\": \"Av. Javier Prado 778\",\n    \"phone\": \"925219345\",\n    \"password\": \"654321\",\n    \"status\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "ACTUALIZAR CLIENTE",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"name\": \"George Castillo\",\r\n  \"gender\": \"M\",\r\n  \"age\": 30,\r\n  \"identification\": \"70291259\",\r\n  \"address\": \"Av. Javier Prado 777\",\r\n  \"phone\": \"941131257\",\r\n  \"password\": \"123456\",\r\n  \"status\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/clientes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ACTUALIZAR CLIENTE",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 1,\r\n  \"name\": \"George Castillo\",\r\n  \"gender\": \"M\",\r\n  \"age\": 30,\r\n  \"identification\": \"70291259\",\r\n  \"address\": \"Av. Javier Prado 777\",\r\n  \"phone\": \"941131257\",\r\n  \"password\": \"123456\",\r\n  \"status\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/clientes",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"clientes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "120"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Jun 2024 16:47:07 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"George Castillo\",\n    \"address\": \"Av. Javier Prado 777\",\n    \"phone\": \"941131257\",\n    \"password\": \"123456\",\n    \"status\": true\n}"
+						},
+						{
+							"name": "ACTUALIZAR CLIENTE",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 1,\r\n  \"age\": 30\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/clientes",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"clientes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "120"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Jun 2024 16:47:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"George Castillo\",\n    \"address\": \"Av. Javier Prado 777\",\n    \"phone\": \"941131257\",\n    \"password\": \"123456\",\n    \"status\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "REEMPLAZAR CLIENTE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 4,\r\n  \"name\": \"George Castillo Farfan\",\r\n  \"gender\": \"M\",\r\n  \"age\": 30,\r\n  \"identification\": \"70291259\",\r\n  \"address\": \"Av. Javier Prado 777\",\r\n  \"phone\": \"941131257\",\r\n  \"password\": \"123456\",\r\n  \"status\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/clientes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "REEMPLAZAR CLIENTE",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 1,\r\n  \"name\": \"George Castillo\",\r\n  \"gender\": \"M\",\r\n  \"age\": 1,\r\n  \"address\": \"Av. Javier Prado 777\",\r\n  \"phone\": \"51941131257\",\r\n  \"password\": \"123456\",\r\n  \"status\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/clientes",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"clientes"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "127"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Jun 2024 16:50:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"CLI0005\",\n    \"description\": \"Campos obligatorios: id, name, gender, age, identification, address, phone, password, status\"\n}"
+						},
+						{
+							"name": "REEMPLAZAR CLIENTE",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 1,\r\n  \"name\": \"George Castillo Farfan\",\r\n  \"gender\": \"M\",\r\n  \"age\": 30,\r\n  \"identification\": \"70291259\",\r\n  \"address\": \"Av. Javier Prado 777\",\r\n  \"phone\": \"941131257\",\r\n  \"password\": \"123456\",\r\n  \"status\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/clientes",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"clientes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "127"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Jun 2024 16:50:37 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"George Castillo Farfan\",\n    \"address\": \"Av. Javier Prado 777\",\n    \"phone\": \"941131257\",\n    \"password\": \"123456\",\n    \"status\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "ELIMINAR CLIENTE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clientes/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientes",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ELIMINAR CLIENTE",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/clientes/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"clientes",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Jun 2024 16:51:09 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "ELIMINAR CLIENTE",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/clientes/3",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"clientes",
+										"3"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Jun 2024 16:51:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"CLI0001\",\n    \"description\": \"Cliente no encontrado\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "BUSINESS-ACCOUNT-MANAGEMENT-SERVICE",
+			"item": [
+				{
+					"name": "CUENTAS",
+					"item": [
+						{
+							"name": "LISTAR CUENTAS",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/cuentas",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"cuentas"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "LISTAR CUENTAS",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8082/cuentas",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"cuentas"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Jun 2024 19:15:15 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 2,\n        \"clientName\": \"Maria Fernanda Aranda Castro\",\n        \"accountNumber\": \"193-12831974-0\",\n        \"accountType\": \"CORRIENTE\",\n        \"initialBalance\": 1000,\n        \"status\": true\n    },\n    {\n        \"id\": 1,\n        \"clientName\": \"Maria Fernanda Aranda Castro\",\n        \"accountNumber\": \"193-12831975-0\",\n        \"accountType\": \"CORRIENTE\",\n        \"initialBalance\": 2000,\n        \"status\": true\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "OBTENER CUENTA",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/cuentas/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"cuentas",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OBTENER CUENTA",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8082/cuentas/1",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"cuentas",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "150"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Jun 2024 19:15:18 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"clientName\": \"Maria Fernanda Aranda Castro\",\n    \"accountNumber\": \"193-12831975-0\",\n    \"accountType\": \"CORRIENTE\",\n    \"initialBalance\": 2000,\n    \"status\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "CREAR CUENTA",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": \"193-12831974-0\",\r\n    \"accountType\": \"CORRIENTE\",\r\n    \"initialBalance\": 1000.00,\r\n    \"status\": true,\r\n    \"clientId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8082/cuentas",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"cuentas"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "CREAR CUENTA",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"accountNumber\": \"193-12831974-0\",\r\n    \"accountType\": \"CORRIENTE\",\r\n    \"initialBalance\": 1000.00,\r\n    \"status\": true,\r\n    \"clientId\": 3\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8082/cuentas",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"cuentas"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "150"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Jun 2024 19:14:51 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 2,\n    \"clientName\": \"Maria Fernanda Aranda Castro\",\n    \"accountNumber\": \"193-12831974-0\",\n    \"accountType\": \"CORRIENTE\",\n    \"initialBalance\": 1000,\n    \"status\": true\n}"
+								},
+								{
+									"name": "CREAR CUENTA",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"accountNumber\": \"193-12831974-0\",\r\n    \"accountType\": \"CORRIENTE\",\r\n    \"initialBalance\": 1000.00,\r\n    \"status\": true,\r\n    \"clientId\": 5\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8082/cuentas",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"cuentas"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "56"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Jun 2024 19:15:34 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": \"ACC0002\",\n    \"description\": \"Cliente no encontrado\"\n}"
+								}
+							]
+						},
+						{
+							"name": "ACTUALIZAR CUENTA",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"accountNumber\": \"193-12831976-0\",\r\n    \"accountType\": \"CORRIENTE\",\r\n    \"initialBalance\": 5000.00,\r\n    \"status\": true,\r\n    \"clientId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8082/cuentas",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"cuentas"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "ACTUALIZAR CUENTA",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\": 1,\r\n    \"accountNumber\": \"193-12831975-0\",\r\n    \"accountType\": \"CORRIENTE\",\r\n    \"initialBalance\": 2000.00,\r\n    \"status\": true,\r\n    \"clientId\": 1\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8082/cuentas",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"cuentas"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "150"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Jun 2024 19:16:00 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"clientName\": \"Maria Fernanda Aranda Castro\",\n    \"accountNumber\": \"193-12831975-0\",\n    \"accountType\": \"CORRIENTE\",\n    \"initialBalance\": 2000,\n    \"status\": true\n}"
+								},
+								{
+									"name": "ACTUALIZAR CUENTA",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\": 1,\r\n    \"accountNumber\": \"193-12831975-0\",\r\n    \"accountType\": \"CORRIENTE\",\r\n    \"initialBalance\": 2000.00,\r\n    \"status\": true,\r\n    \"clientId\": 5\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8082/cuentas",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"cuentas"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "56"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Jun 2024 19:23:00 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": \"ACC0002\",\n    \"description\": \"Cliente no encontrado\"\n}"
+								}
+							]
+						},
+						{
+							"name": "REEMPLAZAR CUENTA",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"accountNumber\": \"193-12831974-0\",\r\n    \"accountType\": \"CORRIENTE\",\r\n    \"initialBalance\": 5000.00,\r\n    \"status\": true,\r\n    \"clientId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8082/cuentas",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"cuentas"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "REEMPLAZAR CUENTA",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\": 1,\r\n    \"accountNumber\": \"193-12831974-0\",\r\n    \"accountType\": \"CORRIENTE\",\r\n    \"initialBalance\": 5000.00,\r\n    \"status\": true,\r\n    \"clientId\": 3\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8082/cuentas",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"cuentas"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "150"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Jun 2024 19:17:05 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"clientName\": \"Maria Fernanda Aranda Castro\",\n    \"accountNumber\": \"193-12831974-0\",\n    \"accountType\": \"CORRIENTE\",\n    \"initialBalance\": 5000,\n    \"status\": true\n}"
+								},
+								{
+									"name": "REEMPLAZAR CUENTA",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\": 1,\r\n    \"accountNumber\": \"193-12831974-0\",\r\n    \"accountType\": \"CORRIENTE\",\r\n    \"initialBalance\": 5000.00,\r\n    \"status\": true,\r\n    \"clientId\": 5\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8082/cuentas",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"cuentas"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "56"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Jun 2024 19:23:05 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": \"ACC0002\",\n    \"description\": \"Cliente no encontrado\"\n}"
+								},
+								{
+									"name": "REEMPLAZAR CUENTA",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\": 1,\r\n    \"accountNumber\": \"193-12831974-0\",\r\n    \"initialBalance\": 5000.00,\r\n    \"status\": true,\r\n    \"clientId\": 5\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8082/cuentas",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"cuentas"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "106"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Jun 2024 19:23:17 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": \"ACC0004\",\n    \"description\": \"Campos obligatorios: id, number, type, initialBalance, status, clientId\"\n}"
+								}
+							]
+						},
+						{
+							"name": "ELIMINAR CUENTA",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/cuentas/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"cuentas",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "ELIMINAR CUENTA",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "localhost:8082/cuentas/1",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"cuentas",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Content-Length",
+											"value": "0"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Jun 2024 20:01:34 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "ELIMINAR CUENTA",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "localhost:8082/cuentas/2",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"cuentas",
+												"2"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "55"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Jun 2024 20:33:06 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": \"ACC0001\",\n    \"description\": \"Cuenta no encontrada\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "MOVIMIENTOS",
+					"item": [
+						{
+							"name": "LISTAR MOVIMIENTOS",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/movimientos",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"movimientos"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "LISTAR MOVIMIENTOS",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8082/movimientos",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"movimientos"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Jun 2024 20:36:41 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"movementDetail\": \"Deposito de -90.56\",\n        \"accountNumber\": \"193-12831974-0\",\n        \"accountType\": \"CORRIENTE\",\n        \"initialBalance\": 5000,\n        \"status\": true\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "OBTENER MOVIMIENTO",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/movimientos/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"movimientos",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OBTENER MOVIMIENTO",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8082/movimientos/1",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"movimientos",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "144"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Jun 2024 20:36:46 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"movementDetail\": \"Deposito de -90.56\",\n    \"accountNumber\": \"193-12831974-0\",\n    \"accountType\": \"CORRIENTE\",\n    \"initialBalance\": 5000,\n    \"status\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "CREAR MOVIMIENTO",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"processDate\": \"2024-06-04\",\r\n  \"movementType\": \"RETIRO\",\r\n  \"amount\": -10000.00,\r\n  \"accountId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8082/movimientos",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"movimientos"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "CREAR MOVIMIENTO",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"processDate\": \"2024-06-04\",\r\n  \"movementType\": \"DEPOSITO\",\r\n  \"amount\": -90.56,\r\n  \"accountId\": 1\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8082/movimientos",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"movimientos"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "144"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Jun 2024 20:36:27 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"movementDetail\": \"Deposito de -90.56\",\n    \"accountNumber\": \"193-12831974-0\",\n    \"accountType\": \"CORRIENTE\",\n    \"initialBalance\": 5000,\n    \"status\": true\n}"
+								},
+								{
+									"name": "CREAR MOVIMIENTO",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"processDate\": \"2024-06-04\",\r\n  \"movementType\": \"DEPOSITO\",\r\n  \"amount\": -90.56,\r\n  \"accountId\": 2\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8082/movimientos",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"movimientos"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "55"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Jun 2024 20:36:34 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": \"ACC0001\",\n    \"description\": \"Cuenta no encontrada\"\n}"
+								},
+								{
+									"name": "CREAR MOVIMIENTO",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"processDate\": \"2024-06-04\",\r\n  \"movementType\": \"RETIRO\",\r\n  \"amount\": -10000.00,\r\n  \"accountId\": 1\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8082/movimientos",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"movimientos"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "53"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Jun 2024 22:10:35 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": \"ACC0010\",\n    \"description\": \"Saldo insuficiente\"\n}"
+								}
+							]
+						},
+						{
+							"name": "ACTUALIZAR MOVIMIENTO",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 1,\r\n  \"processDate\": \"2024-06-04\",\r\n  \"movementType\": \"RETIRO\",\r\n  \"amount\": -10.00,\r\n  \"availableBalance\": 5000.00,\r\n  \"accountId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8082/movimientos",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"movimientos"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "ACTUALIZAR MOVIMIENTO",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"id\": 2,\r\n  \"movementType\": \"RETIRO\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8082/movimientos",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"movimientos"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "59"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Jun 2024 20:36:51 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": \"ACC0009\",\n    \"description\": \"Movimiento no encontrado\"\n}"
+								},
+								{
+									"name": "ACTUALIZAR MOVIMIENTO",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"id\": 1,\r\n  \"movementType\": \"RETIRO\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8082/movimientos",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"movimientos"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "142"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Jun 2024 20:36:58 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"movementDetail\": \"Retiro de -90.56\",\n    \"accountNumber\": \"193-12831974-0\",\n    \"accountType\": \"CORRIENTE\",\n    \"initialBalance\": 5000,\n    \"status\": true\n}"
+								},
+								{
+									"name": "ACTUALIZAR MOVIMIENTO",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"id\": 1,\r\n  \"processDate\": \"2024-06-04\",\r\n  \"movementType\": \"RETIRO\",\r\n  \"amount\": -10.00,\r\n  \"accountId\": 2\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8082/movimientos",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"movimientos"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "55"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Jun 2024 20:40:29 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": \"ACC0001\",\n    \"description\": \"Cuenta no encontrada\"\n}"
+								}
+							]
+						},
+						{
+							"name": "REEMPLAZAR MOVIMIENTO",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 1,\r\n  \"processDate\": \"2024-06-04\",\r\n  \"movementType\": \"RETIRO\",\r\n  \"amount\": -10.00,\r\n  \"availableBalance\": 5000.00,\r\n  \"accountId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8082/movimientos",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"movimientos"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "REEMPLAZAR MOVIMIENTO",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"id\": 1,\r\n  \"processDate\": \"2024-06-04\",\r\n  \"movementType\": \"RETIRO\",\r\n  \"amount\": -10.00,\r\n  \"accountId\": 1\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8082/movimientos",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"movimientos"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "142"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Jun 2024 20:41:17 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"movementDetail\": \"Retiro de -10.00\",\n    \"accountNumber\": \"193-12831974-0\",\n    \"accountType\": \"CORRIENTE\",\n    \"initialBalance\": 5000,\n    \"status\": true\n}"
+								},
+								{
+									"name": "REEMPLAZAR MOVIMIENTO",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"id\": 1,\r\n  \"processDate\": \"2024-06-04\",\r\n  \"movementType\": \"RETIRO\",\r\n  \"amount\": -10.00,\r\n  \"accountId\": 2\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8082/movimientos",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"movimientos"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "59"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Jun 2024 20:42:00 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": \"ACC0009\",\n    \"description\": \"Movimiento no encontrado\"\n}"
+								},
+								{
+									"name": "REEMPLAZAR MOVIMIENTO",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"id\": 2,\r\n  \"processDate\": \"2024-06-04\",\r\n  \"movementType\": \"RETIRO\",\r\n  \"amount\": -10.00,\r\n  \"accountId\": 1\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8082/movimientos",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"movimientos"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "59"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Jun 2024 20:42:08 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": \"ACC0009\",\n    \"description\": \"Movimiento no encontrado\"\n}"
+								}
+							]
+						},
+						{
+							"name": "ELIMINAR MOVIMIENTO",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/movimientos/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"movimientos",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "ELIMINAR MOVIMIENTO",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "localhost:8082/movimientos/2",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"movimientos",
+												"2"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "59"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Jun 2024 20:41:35 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": \"ACC0009\",\n    \"description\": \"Movimiento no encontrado\"\n}"
+								},
+								{
+									"name": "ELIMINAR MOVIMIENTO",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "localhost:8082/movimientos/1",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"movimientos",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Content-Length",
+											"value": "0"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Jun 2024 20:41:45 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "REPORTES",
+					"item": [
+						{
+							"name": "GENERAR REPORTE",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/reportes?from=2024-06-02&to=2024-06-07&clientId=1",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"reportes"
+									],
+									"query": [
+										{
+											"key": "from",
+											"value": "2024-06-02"
+										},
+										{
+											"key": "to",
+											"value": "2024-06-07"
+										},
+										{
+											"key": "clientId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "GENERAR REPORTE",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:8082/reportes?from=2024-06-02&to=2024-06-06&clientId=1",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"reportes"
+											],
+											"query": [
+												{
+													"key": "from",
+													"value": "2024-06-02"
+												},
+												{
+													"key": "to",
+													"value": "2024-06-06"
+												},
+												{
+													"key": "clientId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Jun 2024 22:41:50 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"clientName\": \"George Castillo\",\n        \"processDate\": \"2024-06-04\",\n        \"amount\": 10000,\n        \"availableBalance\": 940,\n        \"accountNumber\": \"193-12831974-0\",\n        \"accountType\": \"CORRIENTE\",\n        \"initialBalance\": 1000,\n        \"status\": true\n    },\n    {\n        \"clientName\": \"George Castillo\",\n        \"processDate\": \"2024-06-04\",\n        \"amount\": -10000,\n        \"availableBalance\": -9060,\n        \"accountNumber\": \"193-12831974-0\",\n        \"accountType\": \"CORRIENTE\",\n        \"initialBalance\": 1000,\n        \"status\": true\n    },\n    {\n        \"clientName\": \"George Castillo\",\n        \"processDate\": \"2024-06-04\",\n        \"amount\": -10,\n        \"availableBalance\": 940,\n        \"accountNumber\": \"193-12831974-0\",\n        \"accountType\": \"CORRIENTE\",\n        \"initialBalance\": 1000,\n        \"status\": true\n    },\n    {\n        \"clientName\": \"George Castillo\",\n        \"processDate\": \"2024-06-04\",\n        \"amount\": -10,\n        \"availableBalance\": 950,\n        \"accountNumber\": \"193-12831974-0\",\n        \"accountType\": \"CORRIENTE\",\n        \"initialBalance\": 1000,\n        \"status\": true\n    },\n    {\n        \"clientName\": \"George Castillo\",\n        \"processDate\": \"2024-06-04\",\n        \"amount\": -10,\n        \"availableBalance\": 960,\n        \"accountNumber\": \"193-12831974-0\",\n        \"accountType\": \"CORRIENTE\",\n        \"initialBalance\": 1000,\n        \"status\": true\n    },\n    {\n        \"clientName\": \"George Castillo\",\n        \"processDate\": \"2024-06-04\",\n        \"amount\": -10,\n        \"availableBalance\": 970,\n        \"accountNumber\": \"193-12831974-0\",\n        \"accountType\": \"CORRIENTE\",\n        \"initialBalance\": 1000,\n        \"status\": true\n    },\n    {\n        \"clientName\": \"George Castillo\",\n        \"processDate\": \"2024-06-04\",\n        \"amount\": -10,\n        \"availableBalance\": 980,\n        \"accountNumber\": \"193-12831974-0\",\n        \"accountType\": \"CORRIENTE\",\n        \"initialBalance\": 1000,\n        \"status\": true\n    },\n    {\n        \"clientName\": \"George Castillo\",\n        \"processDate\": \"2024-06-04\",\n        \"amount\": -10,\n        \"availableBalance\": 980,\n        \"accountNumber\": \"193-12831974-0\",\n        \"accountType\": \"CORRIENTE\",\n        \"initialBalance\": 1000,\n        \"status\": true\n    },\n    {\n        \"clientName\": \"George Castillo\",\n        \"processDate\": \"2024-06-04\",\n        \"amount\": -10,\n        \"availableBalance\": 990,\n        \"accountNumber\": \"193-12831974-0\",\n        \"accountType\": \"CORRIENTE\",\n        \"initialBalance\": 1000,\n        \"status\": true\n    },\n    {\n        \"clientName\": \"George Castillo\",\n        \"processDate\": \"2024-06-04\",\n        \"amount\": -10,\n        \"availableBalance\": 990,\n        \"accountNumber\": \"193-12831974-0\",\n        \"accountType\": \"CORRIENTE\",\n        \"initialBalance\": 1000,\n        \"status\": true\n    }\n]"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

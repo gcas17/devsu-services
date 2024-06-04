@@ -39,7 +39,7 @@ CREATE TABLE Movement (
     date DATE,
     movement_type VARCHAR(255),
     value DECIMAL(10, 2),
-    balance DECIMAL(10, 2),
+    available_balance DECIMAL(10, 2),
     account_id INT,
     FOREIGN KEY (account_id) REFERENCES Account(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
